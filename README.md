@@ -1,5 +1,5 @@
 # autograded-assignment-template
-a template repo for an autograded assignment
+an example autograded assignment
 
 ## Assignment Setup
 
