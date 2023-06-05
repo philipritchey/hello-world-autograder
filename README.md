@@ -1,6 +1,16 @@
 # hello-world-autograder
 an example autograded assignment
 
+## Problem Description
+
+Write the class `Hello`, which
+
+* when compiled and run, prints `hello, world!`
+* contains the method `public static boolean isPrime(long n)`, which
+  * determines whether the argument is a prime number
+    * a prime is a positive integer with exactly two divisors: 1 and itself
+      * :warning: 1 is not prime because it only has 1 divisor
+
 ## Assignment Setup
 
 ### prepare upload to gradescope
