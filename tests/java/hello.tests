@@ -1,0 +1,98 @@
+/*
+@number: 0
+@name: approved includes for Hello.java
+@points: 1
+@type: approved_includes
+@show_output: true
+@target: Hello.java
+*/
+<test>
+java.util.LinkedList
+</test>
+
+/*
+@number: 1
+@name: compiles without errors or warnings
+@points: 1
+@show_output: true
+@type: compile
+*/
+<test>
+Hello.java
+</test>
+
+/*
+@number: 2
+@name: 867 is not prime
+@points: 1
+@show_output: true
+@type: unit
+@target: Hello.java
+*/
+<test>
+  String reason = "867 is not prime.";
+  if (Hello.isPrime(867)) {
+    System.out.println("[FAIL] " + reason);
+    System.exit(1);  // signal failure to test runner
+  } else {
+    System.out.println("[PASS] " + reason);
+    System.exit(0);  // signal success to test runner
+  }
+</test>
+
+/*
+@number: 3
+@name: 5309 is prime
+@points: 1
+@show_output: true
+@type: unit
+@target: Hello.java
+*/
+<test>
+  String reason = "5309 is prime.";
+  if (!Hello.isPrime(5309)) {
+    System.out.println("[FAIL] " + reason);
+    System.exit(1);  // signal failure to test runner
+  } else {
+    System.out.println("[PASS] " + reason);
+    System.exit(0);  // signal success to test runner
+  }
+</test>
+
+/*
+@number: 4
+@name: ??? is [not] prime
+@points: 1
+@show_output: false
+@type: unit
+@target: Hello.java
+*/
+<test>
+  assertThat(Hello.isPrime(867), is(false));
+  assertThat(Hello.isPrime(5309), is(true));
+  assertThat(Hello.isPrime(8675309), is(true));
+</test>
+
+/*
+@number: 5
+@name: hello, world!
+@points: 1
+@show_output: True
+@type: i/o
+@target: Hello.java
+*/
+<test>
+  input: io_tests/main-no-args/input.txt
+  output: io_tests/main-no-args/output.txt
+</test>
+
+/*
+@number: 10
+@name: check style
+@points: 1
+@show_output: true
+@type: style
+*/
+<test>
+Hello.java
+</test>
