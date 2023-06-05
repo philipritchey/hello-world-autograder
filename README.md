@@ -1,4 +1,4 @@
-# autograded-assignment-template
+# hello-world-autograder
 an example autograded assignment
 
 ## Assignment Setup
