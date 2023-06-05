@@ -87,7 +87,7 @@ Hello.java
 </test>
 
 /*
-@number: 10
+@number: 6
 @name: check style
 @points: 1
 @show_output: true
@@ -95,4 +95,27 @@ Hello.java
 */
 <test>
 Hello.java
+</test>
+
+/*
+@number: 7
+@name: performance test
+@points: 1
+@show_output: true
+@type: performance
+@target: Hello.java
+@timeout: 1
+*/
+<test>
+    long cnt = 1;
+    for (int n = 3; n < 2000000; n++) {
+      if (Hello.isPrime(n)) {
+        cnt++;
+      }
+    }
+    System.out.println("  found " + cnt + " primes.");
+    if (cnt != 148933) {
+      System.out.println("[FAIL] incorrect number of primes.");
+      System.exit(1);
+    }
 </test>
